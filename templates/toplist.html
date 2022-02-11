@@ -13,12 +13,12 @@
                 </tr>
             </thead>
             <tbody>
-                {% for Subject in Subjects %}
+                {% for subject in subjects %}
                 <tr>
-                    <td>{{ Subject.name }}</td>
-                    <td>{{ Subject.elo_rank|round|int }}</td>
-                    <td><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ Subject.upvotes }}</td>
-                    <td><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{ Subject.downvotes }}</td>
+                    <td>{{ subject.name }}</td>
+                    <td>{{ subject.elo_rank|round|int }}</td>
+                    <td><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ subject.upvotes }}</td>
+                    <td><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{ subject.downvotes }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
