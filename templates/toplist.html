@@ -13,12 +13,12 @@
                 </tr>
             </thead>
             <tbody>
-                {% for person in persons %}
+                {% for Subject in Subjects %}
                 <tr>
-                    <td class="toplist-table-image"><img src="{{ person.path }}" class="toplist-image"></td>
-                    <td>{{ person.elo_rank|round|int }}</td>
-                    <td><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ person.upvotes }}</td>
-                    <td><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{ person.downvotes }}</td>
+                    <td class="toplist-table-image"><img src="{{ Subject.name }}"></td>
+                    <td>{{ Subject.elo_rank|round|int }}</td>
+                    <td><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ Subject.upvotes }}</td>
+                    <td><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{ Subject.downvotes }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

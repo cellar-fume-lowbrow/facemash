@@ -6,8 +6,6 @@ import configparser
 import random
 import os
 
-from facemash import Subjects
-
 app = Flask(__name__)
 app.config.from_pyfile('config.py.sample')
 db = SQLAlchemy(app)
