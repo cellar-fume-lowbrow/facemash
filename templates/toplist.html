@@ -1,19 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-       <div class="col-md-10 offset-md-1">
+
           <table class="table table-striped">
             <thead>
                 <tr>
-                    <td>Image</td>
-                    <td>Rank</td>
-                    <td>Upvotes</td>
-                    <td>Downvotes</td>
+                    <th scope="col">Image</th>
+                    <th scope="col">Rank</th>
+                    <th scope="col">Upvotes</th>
+                    <th scope="col">Downvotes</th>
                 </tr>
             </thead>
             <tbody>
-                {% for subject in subjects %}
+                {% for idx, subject in enumerate(subjects): %}
                 <tr>
+                    <td>{{ idx }}</td>
                     <td>{{ subject.name }}</td>
                     <td>{{ subject.elo_rank|round|int }}</td>
                     <td>{{ subject.upvotes }}</td>
@@ -22,5 +23,4 @@
                 {% endfor %}
             </tbody>
         </table>
-    </div>
 {% endblock content %}
