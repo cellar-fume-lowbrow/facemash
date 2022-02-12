@@ -4,16 +4,18 @@
     <h1>Which Project adds most value?</h1>
     <div class="middle">
         <div class="lg">
+            <h2>{{ contestants[0].name }}</h2>
             <a href="/vote/{{ contestants[0].id }}/{{ contestants[1].id }}">
-                <h2>{{ contestants[0].name }}</h2>
+                <button type="button" class="btn btn-lg btn-default">Submit</button>
             </a>
         </div>
         <div class="sm">
             OR
         </div>
         <div class="lg">
+            <h2>{{ contestants[1].name }}</h2>
             <a href="/vote/{{ contestants[1].id }}/{{ contestants[0].id }}">
-                <h2>{{ contestants[1].name }}</h2>
+                <button type="button" class="btn btn-lg btn-default">Submit</button>
             </a>
         </div>
     </div>
