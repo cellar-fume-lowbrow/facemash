@@ -9,7 +9,7 @@
                     <div class="panel-heading">
                         <h3 class="panel-title text-center">{{ contestants[0].name }}</h3>
                     </div>
-                    <div class="panel body">
+                    <div class="panel body text-center">
                         <a href="/vote/{{ contestants[0].id }}/{{ contestants[1].id }}">
                             <button type="button" class="btn btn-lg btn-primary text-center">Submit</button>
                         </a>
@@ -27,8 +27,8 @@
                     <div class="panel-heading">
                         <h3 class="panel-title text-center">{{ contestants[1].name }}</h3>
                     </div>
-                    <div class="panel body">
-                        <a href="/vote/{{ contestants[1].id }}/{{ contestants[0].id }}" class="text-center">
+                    <div class="panel body text-center">
+                        <a href="/vote/{{ contestants[1].id }}/{{ contestants[0].id }}">
                             <button type="button" class="btn btn-lg btn-primary text-center">Submit</button>
                         </a>
                     </div>
