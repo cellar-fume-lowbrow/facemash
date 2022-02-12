@@ -7,7 +7,6 @@
             <a href="/vote/{{ contestants[0].id }}/{{ contestants[1].id }}">
                 <h2>{{ contestants[0].name }}</h2>
             </a>
-            <i class="fa fa-thumbs-up" aria-hidden="true"></i> {{contestants[0].upvotes}} <i class="fa fa-thumbs-down" aria-hidden="true"></i> {{contestants[0].downvotes}} <b>chance to win: </b>{{ (1/(1 + 10 ** ((contestants[1].elo_rank-contestants[0].elo_rank) / 400)) *100 )}}%<br/>
         </div>
         <div class="sm">
             OR
@@ -16,7 +15,6 @@
             <a href="/vote/{{ contestants[1].id }}/{{ contestants[0].id }}">
                 <h2>{{ contestants[1].name }}</h2>
             </a>
-            <i class="fa fa-thumbs-up" aria-hidden="true"></i> {{contestants[1].upvotes}} <i class="fa fa-thumbs-down" aria-hidden="true"></i> {{contestants[1].downvotes}} <b>chance to win: </b>{{ (1/(1 + 10 ** ((contestants[0].elo_rank-contestants[1].elo_rank) / 400)) *100 )}}%<br/>
         </div>
     </div>
 {% endblock content %}
