@@ -16,8 +16,8 @@
                 <tr>
                     <td>{{ subject.name }}</td>
                     <td>{{ subject.elo_rank|round|int }}</td>
-                    <td><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ subject.upvotes }}</td>
-                    <td><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{ subject.downvotes }}</td>
+                    <td>{{ subject.upvotes }}</td>
+                    <td>{{ subject.downvotes }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

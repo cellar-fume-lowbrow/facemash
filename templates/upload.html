@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Were we let in for our looks? xNo. Will we be judged for them? Yes.</h2>
-    <h1>Who's hotter? Click to Choose.</h1>
-    <div class="middle">
-        <form action="/add_item" method="POST">
-            <p>Project Name : <input type = "text" name = "Project" /></p>
-            <p><input type = "submit" value = "Submit" /></p>
-
-        </form>
-    </div>
+ <div class="page-header">
+     <h1>Add a Project</h1>
+ </div>
+<div class="well">
+    <form action="/add_item" method="POST">
+        <p>Project Name : <input type = "text" name = "Project" /></p>
+        <p><input type = "submit" value = "Submit" /></p>
+    </form>
+</div>
 {% endblock content %}
