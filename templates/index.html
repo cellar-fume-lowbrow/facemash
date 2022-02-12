@@ -2,21 +2,39 @@
 
 {% block content %}
     <h1>Which Project adds most value?</h1>
-    <div class="middle">
-        <div class="lg">
-            <h2>{{ contestants[0].name }}</h2>
-            <a href="/vote/{{ contestants[0].id }}/{{ contestants[1].id }}">
-                <button type="button" class="btn btn-lg btn-default">Submit</button>
-            </a>
-        </div>
-        <div class="sm">
-            OR
-        </div>
-        <div class="lg">
-            <h2>{{ contestants[1].name }}</h2>
-            <a href="/vote/{{ contestants[1].id }}/{{ contestants[0].id }}">
-                <button type="button" class="btn btn-lg btn-default">Submit</button>
-            </a>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{ contestants[0].name }}</h3>
+                    </div>
+                    <div class="panel body">
+                        <a href="/vote/{{ contestants[0].id }}/{{ contestants[1].id }}">
+                            <button type="button" class="btn btn-lg btn-primary">Submit</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2">
+                <h2>OR</h2>
+            </div>
+
+
+            <div class="col-sm-5">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{{ contestants[1].name }}</h3>
+                    </div>
+                    <div class="panel body">
+                        <a href="/vote/{{ contestants[1].id }}/{{ contestants[0].id }}">
+                            <button type="button" class="btn btn-lg btn-primary">Submit</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 {% endblock content %}
