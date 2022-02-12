@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-          <table class="table table-striped">
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-10">
+        <table class="table table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Image</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Title</th>
                     <th scope="col">Rank</th>
                     <th scope="col">Upvotes</th>
                     <th scope="col">Downvotes</th>
@@ -14,7 +17,7 @@
             <tbody>
                 {% for subject in subjects %}
                 <tr>
-                    <td>{{ loop.index }}</td>
+                    <th scope="row">{{ loop.index }}</th>
                     <td>{{ subject.name }}</td>
                     <td>{{ subject.elo_rank|round|int }}</td>
                     <td>{{ subject.upvotes }}</td>
@@ -23,4 +26,8 @@
                 {% endfor %}
             </tbody>
         </table>
+    </div>
+  </div>
+</div>
+
 {% endblock content %}
