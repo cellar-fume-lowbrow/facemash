@@ -7,4 +7,11 @@ Regarding the aspect of morale and respect this application may provoke some, th
 ## Installation
 There is a few steps to be done to install the application first off you'll need to copy the configuration sample to config.py and set the correct parameters. Once it is done you may create the database, import db from facemash.py and issue the `db.create_all()` method. 
 
+To create the initial database, just import the db object from an interactive Python shell and run the SQLAlchemy.create_all() method to create the tables and database:
+
+>>> from yourapplication import db
+>>> db.create_all()
+
+
+
 Configure any uWGSI server to run the application or use the flask built in webserver to serve the webapp.
